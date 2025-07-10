@@ -7,7 +7,7 @@
       onload="this.rel='stylesheet'"
       href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
     />
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=dehaze" />
     <title>Home</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
@@ -16,7 +16,7 @@
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-3">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-3 relative">
           <div class="flex items-center gap-4 text-[#111418]">
             <div class="size-4">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,15 +35,43 @@
             </div>
             <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">AITAM RISE</h2>
           </div>
-          <div class="flex flex-1 justify-end gap-8">
+          <!-- Hamburger Icon for Mobile -->
+          <button id="mobile-menu-btn" class="block md:hidden text-2xl z-30" aria-label="Open Menu">
+            <span class="material-symbols-outlined">
+              dehaze
+              </span>
+          </button>
+        
+          <div class="hidden md:flex flex-1 justify-end gap-8">
             <div class="flex items-center gap-9">
               <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Programs</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">About</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Team</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Satart-up</a>
               <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Success Stories</a>
               <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Events</a>
               <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Contact</a>
             </div>
             <button
               class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1672ce] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Apply Now</span>
+            </button>
+          </div>
+          <!-- Mobile Nav (Sliding) -->
+          <div id="mobile-nav" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-20 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-8 gap-6">
+            <button id="close-mobile-nav" class="self-end text-2xl mb-4" aria-label="Close Menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <a class="text-[#111418] text-base font-medium leading-normal" href="#">Programs</a>
+            <a class="text-[#111418] text-base font-medium leading-normal" href="#">About</a>
+            <a class="text-[#111418] text-base font-medium leading-normal" href="#">Team</a>
+            <a class="text-[#111418] text-base font-medium leading-normal" href="#">Satart-up</a>
+            <a class="text-[#111418] text-base font-medium leading-normal" href="#">Success Stories</a>
+            <a class="text-[#111418] text-base font-medium leading-normal" href="#">Events</a>
+            <a class="text-[#111418] text-base font-medium leading-normal" href="#">Contact</a>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1672ce] text-white text-base font-bold leading-normal tracking-[0.015em]"
             >
               <span class="truncate">Apply Now</span>
             </button>
@@ -240,5 +268,36 @@
         </footer>
       </div>
     </div>
+    <script>
+      // Mobile nav slide in/out
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileNav = document.getElementById('mobile-nav');
+      const closeMobileNav = document.getElementById('close-mobile-nav');
+
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileNav.classList.remove('translate-x-full');
+        mobileNav.classList.add('translate-x-0');
+        document.body.classList.add('overflow-hidden');
+      });
+
+      closeMobileNav.addEventListener('click', () => {
+        mobileNav.classList.add('translate-x-full');
+        mobileNav.classList.remove('translate-x-0');
+        document.body.classList.remove('overflow-hidden');
+      });
+
+      // Optional: Close nav when clicking outside
+      window.addEventListener('click', (e) => {
+        if (
+          !mobileNav.contains(e.target) &&
+          !mobileMenuBtn.contains(e.target) &&
+          !mobileNav.classList.contains('translate-x-full')
+        ) {
+          mobileNav.classList.add('translate-x-full');
+          mobileNav.classList.remove('translate-x-0');
+          document.body.classList.remove('overflow-hidden');
+        }
+      });
+    </script>
   </body>
 </html>
