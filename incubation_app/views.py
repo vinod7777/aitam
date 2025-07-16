@@ -5,8 +5,8 @@ from django.shortcuts import render
 def final(request):
     return render(request, 'final.html')
 
-def startup(request):
-    return render(request, 'startup.html')
+def about(request):
+    return render(request, 'about.html')
 
 def team(request):
     return render(request, 'team.html')
