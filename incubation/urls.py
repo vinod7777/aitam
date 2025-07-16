@@ -16,7 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from incubation_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.landing, name='landing'),
+    path('startup/', views.startup, name='startup'),
+    path('team/', views.team, name='team'),
+    path('home/', views.home, name='home'),
+    path('contact/', views.contact, name='contact'),
 ]
