@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def landing(request):
-    return render(request, 'landing.html')
+    return render(request, 'final.html')
 
 def startup(request):
     return render(request, 'startup.html')
