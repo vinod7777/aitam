@@ -20,9 +20,8 @@
       <div class="layout-container flex h-full grow flex-col">
         <header class="sticky top-0 bg-white shadow z-50">
           <div class="max-w-7xl mx-auto flex items-center justify-between py-0 md:py-2">
-           <a class="flex items-center space-x-3" href="{% url 'final' %}">
+           <a class="flex items-center space-x-3" href="{% url 'index' %}">
            <img src="{% static 'img/rise.png' %}" alt="" height="80" width="50" style="display:block; margin:0; padding:0;">
-          
            </a>
            <nav>
             <ul class="hidden md:flex space-x-8 font-semibold text-gray-700">
@@ -66,7 +65,7 @@
              <li class="relative group">
               <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">Partners <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
               <ul class="absolute left-0 mt-2 w-40 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
-               <li><a class="block px-4 py-2 hover:bg-purple-100" href="{% url 'final' %}#logos">Logos</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="{% url 'index' %}#logos">Logos</a></li>
               </ul>
              </li>
              <li>
@@ -80,7 +79,7 @@
               </a>
              </li>
              <li>
-              <a class="hover:text-purple-700 focus:text-purple-700 focus:outline-none" href="{% url 'final' %}#contact">
+              <a class="hover:text-purple-700 focus:text-purple-700 focus:outline-none" href="{% url 'index' %}#contact">
                Contact
               </a>
              </li>
