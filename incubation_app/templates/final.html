@@ -1,3 +1,4 @@
+{% load static %}
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
@@ -115,7 +116,7 @@
   <header class="sticky top-0 bg-white shadow z-50">
    <div class="max-w-7xl mx-auto flex items-center justify-between py-0 md:py-2">
     <a class="flex items-center space-x-3" href="#">
-    <img src="../static/img/rise.png" alt="" height="80" width="50" style="display:block; margin:0; padding:0;">
+    <img src="{% static 'img/rise.png' %}" alt="" height="80" width="50" style="display:block; margin:0; padding:0;">
     </a>
     <nav>
      <ul class="hidden md:flex space-x-8 font-semibold text-gray-700">
@@ -363,7 +364,7 @@
     <div class="flip-box bg-white h-80" tabindex="0">
      <div class="flip-box-inner h-full">
       <div class="flip-box-front">
-       <img alt="Healthcare technology, stethoscope and digital health icons" height="207" src="../static/img/health.png" width="280"/>
+       <img alt="Healthcare technology, stethoscope and digital health icons" height="207" src="{% static 'img/health.jpg' %}" width="280"/>
        <h3 class="text-xl font-semibold mt-4">
         Healthcare
        </h3>
@@ -733,7 +734,14 @@
     creating together
    </h1>
    <div class="md:flex md:space-x-8">
-    <form action="#" class="max-w-3xl mx-auto space-y-6 md:w-2/3" method="POST" novalidate="">
+    {% if success %}
+    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+      <strong class="font-bold">Success!</strong>
+      <span class="block sm:inline"> Your details have been submitted.</span>
+    </div>
+  {% endif %}
+  <form action="{% url 'final' %}" class="max-w-3xl mx-auto space-y-6 md:w-2/3" method="POST" novalidate="">
+    {% csrf_token %}
       <div>
        <label class="block text-gray-700 font-semibold mb-1" for="name">
         Your Name
