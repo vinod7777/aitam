@@ -8,11 +8,14 @@ def final(request):
 def about(request):
     return render(request, 'about.html')
 
-def team(request):
-    return render(request, 'team.html')
+def event(request):
+    return render(request, 'event.html')
 
 def home(request):
     return render(request, 'home.html')
 
 def contact(request):
     return render(request, 'contact.html')
+
+def about_view(request):
+    return render(request, 'about.html')
