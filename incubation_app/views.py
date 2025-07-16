@@ -3,7 +3,7 @@ from .models import Submission
 
 # Create your views here.
 
-def final(request):
+def index(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -19,8 +19,8 @@ def final(request):
             location=location,
             join_as=join_as
         )
-        return render(request, 'final.html', {'success': True})
-    return render(request, 'final.html')
+        return render(request, 'index.html', {'success': True})
+    return render(request, 'index.html')
 
 def about(request):
     return render(request, 'about.html')

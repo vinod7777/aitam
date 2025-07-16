@@ -20,7 +20,7 @@ from incubation_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.final, name='final'),
+    path('', views.index, name='index'),
     path('startup/', views.about, name='about'),
     path('team/', views.team, name='team'),
     path('home/', views.home, name='home'),
