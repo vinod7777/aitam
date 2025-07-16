@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html lang="en">
+        <head>
+         <meta charset="utf-8"/>
+         <meta content="width=device-width, initial-scale=1" name="viewport"/>
+         <title>
+          Innovation Incubator | From Idea to Impact
+         </title>
+         
+         <meta content="Innovation Incubator is a team of passionate technologists and industry experts in crafting digital solutions for everyday needs" name="description"/>
+         <script src="https://cdn.tailwindcss.com">
+         </script>
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+         <style>
+          body {
+             font-family: 'Inter', sans-serif;
+           }
+           /* Flip box styles */
+           .flip-box {
+             perspective: 1000px;
+           }
+           .flip-box-inner {
+             position: relative;
+             width: 100%;
+             height: 100%;
+             text-align: center;
+             transition: transform 0.6s;
+             transform-style: preserve-3d;
+             cursor: pointer;
+           }
+           .flip-box:hover .flip-box-inner,
+           .flip-box:focus-within .flip-box-inner {
+             transform: rotateY(180deg);
+           }
+           .flip-box-front,
+           .flip-box-back {
+             position: absolute;
+             width: 100%;
+             height: 100%;
+             backface-visibility: hidden;
+             border-radius: 0.5rem;
+             overflow: hidden;
+             box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             padding: 1.5rem;
+           }
+           .flip-box-front {
+             background-color: #f9fafb;
+             color: #333;
+           }
+           .flip-box-front img {
+             margin: 0 auto 1rem;
+             max-width: 100%;
+             height: auto;
+             border-radius: 0.375rem;
+           }
+           .flip-box-back {
+             background-color: #92489b;
+             color: white;
+             transform: rotateY(180deg);
+             padding-top: 2rem;
+             padding-bottom: 2rem;
+           }
+           .flip-box-back a {
+             margin-top: auto;
+             display: inline-block;
+             background-color: #7a3ea0;
+             padding: 0.5rem 1rem;
+             border-radius: 0.375rem;
+             font-weight: 600;
+             text-decoration: none;
+             color: white;
+             transition: background-color 0.3s;
+           }
+           .flip-box-back a:hover,
+           .flip-box-back a:focus {
+             background-color: #5e2e75;
+           }
+           /* Scrollbar for testimonial carousel */
+           .scrollbar-hide::-webkit-scrollbar {
+             display: none;
+           }
+           .scrollbar-hide {
+             -ms-overflow-style: none;
+             scrollbar-width: none;
+           }
+           .slider-nav-btn {
+             z-index: 50 !important;
+             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+           }
+           .partner-scroll {
+             display: flex;
+             white-space: nowrap;
+             animation: scroll-partners 10s linear infinite;
+           }
+           .partner-scroll img {
+             margin-left: 2rem;
+             margin-right: 2rem;
+           }
+           @keyframes scroll-partners {
+             0% {
+               transform: translateX(0);
+             }
+             100% {
+               transform: translateX(-50%);
+             }
+           }
+         </style>
+       
+        </head>
+<body>
+    <nav>
+        <ul class="hidden md:flex space-x-8 font-semibold text-gray-700">
+         <li class="relative group">
+          <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">About Us <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+          <ul class="absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="{% url 'about' %}">About AITAM Rise</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#vision">Vision</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#mission">Mission</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#governance-council">Governance Council</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#management-team">Management Team</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#focus-areas">Focus Areas</a></li>
+          </ul>
+         </li>
+         <li class="relative group">
+          <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">Services <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+          <ul class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#pre-incubation-support">Pre-incubation Support</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#incubation-support">Incubation Support</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#mentorship">Mentorship</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#networking">Networking</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#funding-assistance">Funding Assistance</a></li>
+          </ul>
+         </li>
+         <li class="relative group">
+          <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">Programs <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+          <ul class="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="{% url 'event' %}">RISE Cohort 1</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#problemathon">Problemathon</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#ideathon">Ideathon</a></li>
+          </ul>
+         </li>
+         <li class="relative group">
+          <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">Facilities <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+          <ul class="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#idealab">Idealab</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#co-working-space">Co-working Space</a></li>
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#labs">Labs</a></li>
+          </ul>
+         </li>
+         <li class="relative group">
+          <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">Partners <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+          <ul class="absolute left-0 mt-2 w-40 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
+           <li><a class="block px-4 py-2 hover:bg-purple-100" href="#logos">Logos</a></li>
+          </ul>
+         </li>
+         <li>
+          <a class="hover:text-purple-700 focus:text-purple-700 focus:outline-none" href="#about-us">
+           News & Events
+          </a>
+         </li>
+          <li>
+          <a class="hover:text-purple-700 focus:text-purple-700 focus:outline-none" href="#about-us">
+           testimonials
+          </a>
+         </li>
+         <li>
+          <a class="hover:text-purple-700 focus:text-purple-700 focus:outline-none" href="#contact">
+           Contact
+          </a>
+         </li>
+        </ul>
+        <!-- Mobile menu button -->
+        <button aria-label="Toggle menu" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600" id="mobile-menu-button">
+         <i class="fas fa-bars fa-lg">
+         </i>
+        </button>
+       </nav>
+</body>
+</html>
