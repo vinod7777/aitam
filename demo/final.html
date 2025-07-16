@@ -86,6 +86,10 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+    .slider-nav-btn {
+      z-index: 50 !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
   </style>
  </head>
  <body class="bg-white text-gray-900">
@@ -205,10 +209,10 @@
     <div class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 slide active-slide" data-slide="1">
      <img alt="Abstract technology startup studio background with digital network and innovation concept" class="w-full h-full object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/461a54f0-869f-49cc-7d5c-bdc2a68103af.jpg" width="1200"/>
      <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center px-6 md:px-12 text-white">
-      <h2 class="text-3xl md:text-5xl font-bold mb-2">
+      <h2 class="text-3xl md:text-5xl p-5  font-bold mb-2">
        Startup Studio
       </h2>
-      <p class="text-lg md:text-xl max-w-2xl">
+      <p class="text-lg md:text-xl p-5 max-w-2xl">
        Co-Create, Build, Scale idea. Get advisory services, Funding, Market &amp; Ecosystem access.
       </p>
      </div>
@@ -216,10 +220,10 @@
     <div class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 slide" data-slide="2">
      <img alt="Technology services concept with digital interface and futuristic elements" class="w-full h-full object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/32f9e083-b3cf-4e4c-ba47-a7b05a7b4c9b.jpg" width="1200"/>
      <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center px-6 md:px-12 text-white">
-      <h2 class="text-3xl md:text-5xl font-bold mb-2">
+      <h2 class="text-3xl md:text-5xl p-5 font-bold mb-2">
        Technology Services
       </h2>
-      <p class="text-lg md:text-xl max-w-2xl">
+      <p class="text-lg md:text-xl p-5 max-w-2xl">
        We are a team of passionate technologists with decades of experience in crafting digital solutions for everyday needs. We work with founders and enterprises to create differentiated digital, immersive and intelligent experiences, on-time, every time for everyone.
       </p>
      </div>
@@ -227,22 +231,24 @@
     <div class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 slide" data-slide="3">
      <img alt="Foundation and social responsibility concept with hands holding a globe" class="w-full h-full object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/63f63b9e-0c93-491c-0a26-35626539bdeb.jpg" width="1200"/>
      <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center px-6 md:px-12 text-white">
-      <h2 class="text-3xl md:text-5xl font-bold mb-2">
+      <h2 class="text-3xl md:text-5xl p-5 font-bold mb-2">
        Foundation
       </h2>
-      <p class="text-lg md:text-xl max-w-2xl">
+      <p class="text-lg md:text-xl p-5 max-w-2xl">
        We partner with technology companies with Corporate Social Responsibility (CSR) initiatives that align with our mission, as well as with organizations who offer grants for women’s empowerment.
       </p>
      </div>
     </div>
     <!-- Navigation buttons -->
-    <button aria-label="Previous slide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-purple-700 bg-opacity-70 hover:bg-opacity-90 text-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-purple-500" id="prev-slide">
-     <i class="fas fa-chevron-left">
-     </i>
+    <button aria-label="Previous slide"
+      class="slider-nav-btn absolute top-1/2 left-4 transform -translate-y-1/2 bg-purple-700 bg-opacity-70 hover:bg-opacity-90 text-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+      id="prev-slide">
+      <i class="fas fa-chevron-left"></i>
     </button>
-    <button aria-label="Next slide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-purple-700 bg-opacity-70 hover:bg-opacity-90 text-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-purple-500" id="next-slide">
-     <i class="fas fa-chevron-right">
-     </i>
+    <button aria-label="Next slide"
+      class="slider-nav-btn absolute top-1/2 right-4 transform -translate-y-1/2 bg-purple-700 bg-opacity-70 hover:bg-opacity-90 text-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+      id="next-slide">
+      <i class="fas fa-chevron-right"></i>
     </button>
     <!-- Pagination dots -->
     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3" id="slide-dots">
