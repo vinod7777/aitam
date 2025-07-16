@@ -90,6 +90,23 @@
       z-index: 50 !important;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
+    .partner-scroll {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll-partners 10s linear infinite;
+    }
+    .partner-scroll img {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    @keyframes scroll-partners {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
   </style>
  </head>
  <body class="bg-white text-gray-900">
@@ -307,10 +324,35 @@
     </div>
    </div>
   </section>
+  <!-- Partners Section -->
+  <section class="max-w-7xl mx-auto px-6 py-12 mt-12 bg-white rounded-lg shadow-lg" id="partners">
+    <h2 class="text-purple-800 font-semibold text-sm mb-2 tracking-widest">
+      OUR PARTNERS
+    </h2>
+    <h1 class="text-3xl font-extrabold mb-6">
+      Proudly Collaborating With
+    </h1>
+    <p class="max-w-2xl mb-10 text-gray-700 text-lg">
+      We are grateful to our partners who support our mission and help us drive innovation forward. Their collaboration and trust empower us to create greater impact.
+    </p>
+    <div class="overflow-hidden w-full">
+      <div class="partner-scroll flex items-center" style="white-space: nowrap;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Partner 1 Logo" class="h-16 w-auto object-contain mx-8"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Partner 2 Logo" class="h-16 w-auto object-contain mx-8"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="Partner 3 Logo" class="h-16 w-auto object-contain mx-8"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Partner 4 Logo" class="h-16 w-auto object-contain mx-8"/>
+        <!-- Duplicate for seamless loop -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Partner 1 Logo" class="h-16 w-auto object-contain mx-8"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Partner 2 Logo" class="h-16 w-auto object-contain mx-8"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="Partner 3 Logo" class="h-16 w-auto object-contain mx-8"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Partner 4 Logo" class="h-16 w-auto object-contain mx-8"/>
+      </div>
+    </div>
+  </section>
   <!-- Digital Accelerators Section -->
   <section class="max-w-7xl mx-auto px-6 py-12 bg-purple-50 rounded-lg shadow-lg" id="digital-accelerators">
    <h2 class="text-purple-800 font-semibold text-sm mb-2 tracking-widest">
-    DIGITAL ACCELERATORS
+    FOCUS AREAS
    </h2>
    <h1 class="text-3xl font-extrabold mb-8">
     With years of industry knowledge and real world problem solving, we have created platforms, services, tools and techniques that you can re-use from day 1.
@@ -320,20 +362,21 @@
     <div class="flip-box bg-white h-80" tabindex="0">
      <div class="flip-box-inner h-full">
       <div class="flip-box-front">
-       <img alt="Artificial intelligence concept with digital brain and neural network" height="207" src="https://storage.googleapis.com/a1aa/image/2f764068-5422-4d78-fa5d-e27625a7a003.jpg" width="280"/>
+       <img alt="Healthcare technology, stethoscope and digital health icons" height="207" src="https://images.unsplash.com/photo-1519494080410-f9aa8f52f1e1?auto=format&fit=crop&w=400&q=80" width="280"/>
        <h3 class="text-xl font-semibold mt-4">
-        Artificial intelligence
+        Healthcare
        </h3>
        <p class="mt-2 text-purple-600 font-semibold">
-        CogFab.ai
+        HealthTech
        </p>
       </div>
       <div class="flip-box-back flex flex-col">
        <h3 class="text-xl font-semibold mb-2">
-        Artificial intelligence
+        Healthcare
        </h3>
        <p class="mb-4 text-sm leading-relaxed">
         Our Founders pioneered several AI algorithms in the early 1990s. CogFab.ai offers accelerators for Recommendation engines, Conversational AI, Automation, Radical personalization, Computer Vision, Prediction engines, Prompt Engineering and Situational Awareness using open source and custom AI Models and Digital Twins.
+        
        </p>
        <a class="self-start" href="#artificial-intelligence">
         More ...
@@ -345,20 +388,20 @@
     <div class="flip-box bg-white h-80" tabindex="0">
      <div class="flip-box-inner h-full">
       <div class="flip-box-front">
-       <img alt="UX/UI design concept with wireframes and user interface elements" height="207" src="https://storage.googleapis.com/a1aa/image/eb4c7163-57ab-4494-6354-2b663f48c495.jpg" width="280"/>
+       <img alt="Education technology, online learning, books and digital devices" height="207" src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" width="280"/>
        <h3 class="text-xl font-semibold mt-4">
-        UX/UI Services
+        Education
        </h3>
        <p class="mt-2 text-purple-600 font-semibold">
-        Design Lab
+        EdTech
        </p>
       </div>
       <div class="flip-box-back flex flex-col">
        <h3 class="text-xl font-semibold mb-2">
-        UX/UI Services
+        Education
        </h3>
        <p class="mb-4 text-sm leading-relaxed">
-        Our UX design services aim to create a smooth and intuitive experience based on the user's particular needs, while our UI design team focuses on creating visually striking interfaces that attract and engage users.
+        Our Founders pioneered several AI algorithms in the early 1990s. CogFab.ai offers accelerators for Recommendation engines, Conversational AI, Automation, Radical personalization, Computer Vision, Prediction engines, Prompt Engineering and Situational Awareness using open source and custom AI Models and Digital Twins.
        </p>
        <a class="self-start" href="#immersive-experience">
         More ...
@@ -370,20 +413,20 @@
     <div class="flip-box bg-white h-80" tabindex="0">
      <div class="flip-box-inner h-full">
       <div class="flip-box-front">
-       <img alt="Big data concept with data streams and analytics" height="207" src="https://storage.googleapis.com/a1aa/image/59f06d7b-01fe-427f-bbbf-5ef8ab17b0a1.jpg" width="280"/>
+       <img alt="Finance technology, fintech, digital banking, money and analytics" height="207" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" width="280"/>
        <h3 class="text-xl font-semibold mt-4">
-        Big Data
+        Finance
        </h3>
        <p class="mt-2 text-purple-600 font-semibold">
-        Data Engineering Lab
+        FinTech
        </p>
       </div>
       <div class="flip-box-back flex flex-col">
        <h3 class="text-xl font-semibold mb-2">
-        Big Data
+        Finance
        </h3>
        <p class="mb-4 text-sm leading-relaxed">
-        Use our Data Factory and Data Warehouse frameworks. Source and curate real time, unstructured, structured data from files, scrapes, databases and APIs? Need to do Meta Data Management? Master Data Management? Catalogs? ETL/ELTs? Data Governance? Data security and compliance? Generate analytics and reports.
+        Our Founders pioneered several AI algorithms in the early 1990s. CogFab.ai offers accelerators for Recommendation engines, Conversational AI, Automation, Radical personalization, Computer Vision, Prediction engines, Prompt Engineering and Situational Awareness using open source and custom AI Models and Digital Twins.
        </p>
        <a class="self-start" href="#big-data">
         More ...
@@ -395,20 +438,20 @@
     <div class="flip-box bg-white h-80" tabindex="0">
      <div class="flip-box-inner h-full">
       <div class="flip-box-front">
-       <img alt="Conversational AI concept with chatbots and voice assistants" height="207" src="https://storage.googleapis.com/a1aa/image/832a3978-fdb8-4ed9-3f42-f91e611d630d.jpg" width="280"/>
+       <img alt="Energy technology, renewable energy, solar panels and wind turbines" height="207" src="https://images.unsplash.com/photo-1509395176047-47ba0277781c?auto=format&fit=crop&w=400&q=80" width="280"/>
        <h3 class="text-xl font-semibold mt-4">
-        Conversational AI
+        Energy
        </h3>
        <p class="mt-2 text-purple-600 font-semibold">
-        Holaa.ai
+        EnergyTech
        </p>
       </div>
       <div class="flip-box-back flex flex-col">
        <h3 class="text-xl font-semibold mb-2">
-        Conversational AI
+        Energy
        </h3>
        <p class="mb-4 text-sm leading-relaxed">
-        From large language models such as ChatGPT to Q&amp;A generators, chat and audio bots, we can cover em all. holaa.ai can take care of multi tenancy, branding, scaling and live person handoffs. We can do AWS, Google, Microsoft and other conversational AI platforms. Integrate with transaction systems and data lakehouses. Automate prompts.
+        Our Founders pioneered several AI algorithms in the early 1990s. CogFab.ai offers accelerators for Recommendation engines, Conversational AI, Automation, Radical personalization, Computer Vision, Prediction engines, Prompt Engineering and Situational Awareness using open source and custom AI Models and Digital Twins.
        </p>
        <a class="self-start" href="#conversational-ai">
         More ...
@@ -420,20 +463,20 @@
     <div class="flip-box bg-white h-80" tabindex="0">
      <div class="flip-box-inner h-full">
       <div class="flip-box-front">
-       <img alt="Systems Engineering as a Service concept with cloud infrastructure" height="207" src="https://storage.googleapis.com/a1aa/image/4db016ed-ca7b-4fec-4aa2-102405c13d82.jpg" width="280"/>
+       <img alt="Manufacturing technology, smart factory, robotics and automation" height="207" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" width="280"/>
        <h3 class="text-xl font-semibold mt-4">
-        SEaaS
+        Manufacturing
        </h3>
        <p class="mt-2 text-purple-600 font-semibold">
-        Systems Engineering as a Service
+        ManufacturingTech
        </p>
       </div>
       <div class="flip-box-back flex flex-col">
        <h3 class="text-xl font-semibold mb-2">
-        SEaaS
+        Manufacturing
        </h3>
        <p class="mb-4 text-sm leading-relaxed">
-        From DevOps, MLOps, AIOps and SecOps to Platform Engineering and SRE, we got it covered. Our Systems Engineering 101 course has been given to MTech students. We have AWS certified solution architect associates, AWS certified cloud practitioners, Microsoft, Kubernetes and Terraform certified experts.
+        Our Founders pioneered several AI algorithms in the early 1990s. CogFab.ai offers accelerators for Recommendation engines, Conversational AI, Automation, Radical personalization, Computer Vision, Prediction engines, Prompt Engineering and Situational Awareness using open source and custom AI Models and Digital Twins.    
        </p>
        <a class="self-start" href="#seaas">
         More ...
@@ -677,6 +720,7 @@
     </div>
    </div>
   </section>
+  
   <!-- Contact Section -->
   <section class="max-w-7xl mx-auto px-6 py-12 mt-12 bg-purple-50 rounded-lg shadow-lg" id="contact">
    <h2 class="text-purple-800 font-semibold text-sm mb-2 tracking-widest">
