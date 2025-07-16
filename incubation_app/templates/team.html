@@ -16,40 +16,115 @@
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#111418]">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_6_535)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                    fill="currentColor"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_6_535"><rect width="48" height="48" fill="white"></rect></clipPath>
-                </defs>
-              </svg>
-            </div>
-            <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">AITAM RISE</h2>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Home</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">About</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Programs</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Team</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Contact</a>
-            </div>
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1672ce] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span class="truncate">Apply Now</span>
+        <header class="sticky top-0 bg-white shadow z-50">
+          <div class="max-w-7xl mx-auto flex items-center justify-between py-0 md:py-2">
+           <a class="flex items-center space-x-3" href="#">
+           <img src="{% static 'img/rise.png' %}" alt="" height="80" width="50" style="display:block; margin:0; padding:0;">
+           </a>
+           <nav>
+            <ul class="hidden md:flex space-x-8 font-semibold text-gray-700">
+             <li class="relative group">
+              <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">About Us <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+              <ul class="absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="{% url 'about' %}">About AITAM Rise</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#vision">Vision</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#mission">Mission</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#governance-council">Governance Council</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#management-team">Management Team</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#focus-areas">Focus Areas</a></li>
+              </ul>
+             </li>
+             <li class="relative group">
+              <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">Services <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+              <ul class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#pre-incubation-support">Pre-incubation Support</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#incubation-support">Incubation Support</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#mentorship">Mentorship</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#networking">Networking</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#funding-assistance">Funding Assistance</a></li>
+              </ul>
+             </li>
+             <li class="relative group">
+              <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">Programs <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+              <ul class="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="{% url 'event' %}">RISE Cohort 1</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#problemathon">Problemathon</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#ideathon">Ideathon</a></li>
+              </ul>
+             </li>
+             <li class="relative group">
+              <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">Facilities <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+              <ul class="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#idealab">Idealab</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#co-working-space">Co-working Space</a></li>
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#labs">Labs</a></li>
+              </ul>
+             </li>
+             <li class="relative group">
+              <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">Partners <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+              <ul class="absolute left-0 mt-2 w-40 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
+               <li><a class="block px-4 py-2 hover:bg-purple-100" href="#logos">Logos</a></li>
+              </ul>
+             </li>
+             <li>
+              <a class="hover:text-purple-700 focus:text-purple-700 focus:outline-none" href="#about-us">
+               News & Events
+              </a>
+             </li>
+              <li>
+              <a class="hover:text-purple-700 focus:text-purple-700 focus:outline-none" href="#about-us">
+               testimonials
+              </a>
+             </li>
+             <li>
+              <a class="hover:text-purple-700 focus:text-purple-700 focus:outline-none" href="#contact">
+               Contact
+              </a>
+             </li>
+            </ul>
+            <!-- Mobile menu button -->
+            <button aria-label="Toggle menu" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600" id="mobile-menu-button">
+             <i class="fas fa-bars fa-lg">
+             </i>
             </button>
+           </nav>
           </div>
-        </header>
+          <!-- Mobile menu -->
+          <div class="hidden md:hidden bg-white border-t border-gray-200" id="mobile-menu">
+           <ul class="flex flex-col space-y-2 p-4 font-semibold text-gray-700">
+            <li>
+             <a class="block px-2 py-1 hover:bg-purple-100 rounded focus:bg-purple-100 focus:outline-none" href="#startup-studio">
+              Startup Studio
+             </a>
+            </li>
+            <li>
+             <a class="block px-2 py-1 hover:bg-purple-100 rounded focus:bg-purple-100 focus:outline-none" href="#technology-services">
+              Technology Services
+             </a>
+            </li>
+            <li>
+             <a class="block px-2 py-1 hover:bg-purple-100 rounded focus:bg-purple-100 focus:outline-none" href="#foundation">
+              Foundation
+             </a>
+            </li>
+            <li>
+             <a class="block px-2 py-1 hover:bg-purple-100 rounded focus:bg-purple-100 focus:outline-none" href="#partners">
+              Partners
+             </a>
+            </li>
+            <li>
+             <a class="block px-2 py-1 hover:bg-purple-100 rounded focus:bg-purple-100 focus:outline-none" href="#about-us">
+              About Us
+             </a>
+            </li>
+            <li>
+             <a class="block px-2 py-1 hover:bg-purple-100 rounded focus:bg-purple-100 focus:outline-none" href="#contact">
+              Contact Us
+             </a>
+            </li>
+           </ul>
+          </div>
+         </header>
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="flex flex-wrap justify-between gap-3 p-4">
