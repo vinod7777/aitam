@@ -115,7 +115,7 @@
   <!-- Header -->
   <header class="sticky top-0 bg-white shadow z-50">
    <div class="max-w-7xl mx-auto flex items-center justify-between py-0 md:py-2">
-    <a class="flex items-center space-x-3" href="#">
+    <a class="flex items-center space-x-3" href="{% url 'final' % }">
     <img src="{% static 'img/Rise.png' %}" alt="" height="80" width="50" style="display:block; margin:0; padding:0;">
     </a>
     <nav>
@@ -134,7 +134,7 @@
       <li class="relative group">
        <button class="hover:text-purple-700 focus:text-purple-700 focus:outline-none flex items-center">Services <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
        <ul class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity z-50 invisible group-hover:visible group-focus-within:visible">
-        <li><a class="block px-4 py-2 hover:bg-purple-100" href="#pre-incubation-support">Pre-incubation Support</a></li>
+        <li><a class="block px-4 py-2 hover:bg-purple-100" href="{% url 'team' %}">Pre-incubation Support</a></li>
         <li><a class="block px-4 py-2 hover:bg-purple-100" href="#incubation-support">Incubation Support</a></li>
         <li><a class="block px-4 py-2 hover:bg-purple-100" href="#mentorship">Mentorship</a></li>
         <li><a class="block px-4 py-2 hover:bg-purple-100" href="#networking">Networking</a></li>
