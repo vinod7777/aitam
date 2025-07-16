@@ -288,25 +288,19 @@
    <hr class="my-12 border-purple-300"/>
    <div class="grid md:grid-cols-3 gap-8 text-center text-gray-800">
     <div>
-     <h3 class="text-2xl font-bold text-purple-700">
-      60+
-     </h3>
+     <h3 class="text-2xl font-bold text-purple-700 countup" data-target="20">0+</h3>
      <p class="mt-1">
       Ideas incubated
      </p>
     </div>
     <div>
-     <h3 class="text-2xl font-bold text-purple-700">
-      $100M
-     </h3>
+     <h3 class="text-2xl font-bold text-purple-700 countup" data-target="10">0k</h3>
      <p class="mt-1">
       Business impact
      </p>
     </div>
     <div>
-     <h3 class="text-2xl font-bold text-purple-700">
-      1k+
-     </h3>
+     <h3 class="text-2xl font-bold text-purple-700 countup" data-target="40">0+</h3>
      <p class="mt-1">
       New jobs created
      </p>
@@ -693,120 +687,104 @@
     <br/>
     creating together
    </h1>
-   <form action="#" class="max-w-3xl mx-auto space-y-6" method="POST" novalidate="">
-    <div>
-     <label class="block text-gray-700 font-semibold mb-1" for="name">
-      Your Name
-      <span class="text-red-600">
-       *
-      </span>
-     </label>
-     <input class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600" id="name" name="name" required="" type="text"/>
-    </div>
-    <div>
-     <label class="block text-gray-700 font-semibold mb-1" for="email">
-      Email
-      <span class="text-red-600">
-       *
-      </span>
-     </label>
-     <input class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600" id="email" name="email" required="" type="email"/>
-    </div>
-    <div>
-     <label class="block text-gray-700 font-semibold mb-1" for="phone">
-      Phone
-      <span class="text-red-600">
-       *
-      </span>
-     </label>
-     <input class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600" id="phone" name="phone" required="" type="tel"/>
-    </div>
-    <div>
-     <label class="block text-gray-700 font-semibold mb-1" for="company">
-      Company Name (Optional)
-     </label>
-     <input class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600" id="company" name="company" type="text"/>
-    </div>
-    <div>
-     <label class="block text-gray-700 font-semibold mb-1" for="location">
-      Location (Optional)
-     </label>
-     <input class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600" id="location" name="location" type="text"/>
-    </div>
-    <div>
-     <label class="block text-gray-700 font-semibold mb-1">
-      Interest
-      <span class="text-red-600">
-       *
-      </span>
-     </label>
-     <div class="flex space-x-6">
-      <label class="inline-flex items-center">
-       <input class="form-checkbox text-purple-600" name="interest" type="checkbox" value="Startup Studio"/>
-       <span class="ml-2">
-        Startup Studio
-       </span>
-      </label>
-      <label class="inline-flex items-center">
-       <input class="form-checkbox text-purple-600" name="interest" type="checkbox" value="Tech Services"/>
-       <span class="ml-2">
-        Tech Services
-       </span>
-      </label>
+   <div class="md:flex md:space-x-8">
+    <form action="#" class="max-w-3xl mx-auto space-y-6 md:w-2/3" method="POST" novalidate="">
+      <div>
+       <label class="block text-gray-700 font-semibold mb-1" for="name">
+        Your Name
+        <span class="text-red-600">
+         *
+        </span>
+       </label>
+       <input class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600" id="name" name="name" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-semibold mb-1" for="email">
+        Email
+        <span class="text-red-600">
+         *
+        </span>
+       </label>
+       <input class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600" id="email" name="email" required="" type="email"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-semibold mb-1" for="phone">
+        Phone
+        <span class="text-red-600">
+         *
+        </span>
+       </label>
+       <input class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600" id="phone" name="phone" required="" type="tel"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-semibold mb-1" for="company">
+        Company Name (Optional)
+       </label>
+       <input class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600" id="company" name="company" type="text"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-semibold mb-1" for="location">
+        Location (Optional)
+       </label>
+       <input class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600" id="location" name="location" type="text"/>
+      </div>
+      
+      <div>
+       <label class="block text-gray-700 font-semibold mb-1">
+        Join as
+        <span class="text-red-600">
+         *
+        </span>
+       </label>
+       <div class="flex space-x-6">
+        <label class="inline-flex items-center">
+         <input checked="" class="form-radio text-purple-600" name="stage" type="radio" value="Idea"/>
+         <span class="ml-2">
+          Mentor
+         </span>
+        </label>
+        <label class="inline-flex items-center">
+         <input class="form-radio text-purple-600" name="stage" type="radio" value="Prototype"/>
+         <span class="ml-2">
+          Partner
+         </span>
+        </label>
+        <label class="inline-flex items-center">
+         <input class="form-radio text-purple-600" name="stage" type="radio" value="MVP"/>
+         <span class="ml-2">
+          Startup
+         </span>
+        </label>
+        
+       </div>
+      </div>
+      
+      <div>
+       <button class="w-full bg-purple-700 text-white font-semibold py-3 rounded hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-600" type="submit">
+        Submit
+       </button>
+      </div>
+     </form>
+     <div class="mt-8 md:mt-0 md:w-1/3 flex flex-col items-center">
+       <iframe
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.393964479836!2d84.194912!3d18.566583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c522ff727489b%3A0x7b3a160927cac1e!2sAditya%20Institute%20of%20Technology%20and%20Management!5e0!3m2!1sen!2sin!4v1718030000000!5m2!1sen!2sin"
+         width="100%"
+         height="500"
+         style="border:0; border-radius: 0.5rem; margin-top: 10px;"
+         allowfullscreen=""
+         loading="lazy"
+         referrerpolicy="no-referrer-when-downgrade"
+       ></iframe>
+       <a
+         href="https://www.google.com/maps/place/Aditya+Institute+of+Technology+and+Management/@18.566583,84.194912,16.58z/data=!4m6!3m5!1s0x3a3c522ff727489b:0x7b3a160927cac1e!8m2!3d18.5658185!4d84.1963287!16s%2Fg%2F1tfc9lsg?entry=ttu"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="text-purple-700 font-semibold hover:underline mt-2 text-center"
+       >
+         Aditya Institute of Technology and Management, Tekkali, Andhra Pradesh
+       </a>
      </div>
-    </div>
-    <div>
-     <label class="block text-gray-700 font-semibold mb-1">
-      Stage
-      <span class="text-red-600">
-       *
-      </span>
-     </label>
-     <div class="flex space-x-6">
-      <label class="inline-flex items-center">
-       <input checked="" class="form-radio text-purple-600" name="stage" type="radio" value="Idea"/>
-       <span class="ml-2">
-        Idea
-       </span>
-      </label>
-      <label class="inline-flex items-center">
-       <input class="form-radio text-purple-600" name="stage" type="radio" value="Prototype"/>
-       <span class="ml-2">
-        Prototype
-       </span>
-      </label>
-      <label class="inline-flex items-center">
-       <input class="form-radio text-purple-600" name="stage" type="radio" value="MVP"/>
-       <span class="ml-2">
-        MVP
-       </span>
-      </label>
-      <label class="inline-flex items-center">
-       <input class="form-radio text-purple-600" name="stage" type="radio" value="Scale"/>
-       <span class="ml-2">
-        Scale
-       </span>
-      </label>
-     </div>
-    </div>
-    <div>
-     <label class="block text-gray-700 font-semibold mb-1" for="resume">
-      Upload Resume
-      <span class="text-red-600">
-       *
-      </span>
-     </label>
-     <input accept=".pdf,.doc,.docx" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600" id="resume" name="resume" required="" type="file"/>
-     <p class="text-sm text-gray-500 mt-1">
-      Accepted file types: pdf, doc, docx. Max. file size permitted: 5 MB
-     </p>
-    </div>
-    <div>
-     <button class="w-full bg-purple-700 text-white font-semibold py-3 rounded hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-600" type="submit">
-      Submit
-     </button>
-    </div>
-   </form>
+   </div>
   </section>
   <!-- Footer -->
   <footer class="bg-white border-t border-gray-200 mt-12 py-8">
@@ -823,23 +801,23 @@
      </a>
     </nav>
     <div class="flex space-x-4 text-purple-700 text-xl">
-     <a aria-label="LinkedIn" href="https://www.linkedin.com/company/innovation-incubator-inc-/" rel="nofollow noopener" target="_blank">
+     <a aria-label="LinkedIn" href="#" rel="nofollow noopener" target="_blank">
       <i class="fab fa-linkedin">
       </i>
      </a>
-     <a aria-label="Facebook" href="https://www.facebook.com/innovationincubatorholding" rel="nofollow noopener" target="_blank">
+     <a aria-label="Facebook" href="#" rel="nofollow noopener" target="_blank">
       <i class="fab fa-facebook">
       </i>
      </a>
-     <a aria-label="Twitter" href="https://twitter.com/InnovationIncu" rel="nofollow noopener" target="_blank">
+     <a aria-label="Twitter" href="#" rel="nofollow noopener" target="_blank">
       <i class="fab fa-twitter">
       </i>
      </a>
-     <a aria-label="YouTube" href="https://www.youtube.com/channel/UCWCTwZNzVP-eUpDX_HYVGfA" rel="nofollow noopener" target="_blank">
+     <a aria-label="YouTube" href="#" rel="nofollow noopener" target="_blank">
       <i class="fab fa-youtube">
       </i>
      </a>
-     <a aria-label="Instagram" href="https://www.instagram.com/innovationincubator" rel="nofollow noopener" target="_blank">
+     <a aria-label="Instagram" href="#" rel="nofollow noopener" target="_blank">
       <i class="fab fa-instagram">
       </i>
      </a>
@@ -910,5 +888,42 @@
     showSlide(0);
     slideInterval = setInterval(nextSlide, 5000);
   </script>
+  <script>
+  // Count up animation function
+  function animateCountUp(el, target, duration = 1500) {
+    let start = 0;
+    let startTime = null;
+    function updateCount(currentTime) {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const value = Math.floor(progress * (target - start) + start);
+      el.textContent = value + '+';
+      if (progress < 1) {
+        requestAnimationFrame(updateCount);
+      } else {
+        el.textContent = target + '+';
+      }
+    }
+    requestAnimationFrame(updateCount);
+  }
+
+  // Intersection Observer to trigger animation
+  const countUpEls = document.querySelectorAll('.countup');
+  let hasAnimated = false;
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAnimated) {
+        countUpEls.forEach(el => {
+          const target = parseInt(el.getAttribute('data-target'), 10);
+          animateCountUp(el, target);
+        });
+        hasAnimated = true;
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  countUpEls.forEach(el => observer.observe(el));
+</script>
  </body>
 </html>
